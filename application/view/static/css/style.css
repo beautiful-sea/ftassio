@@ -1,12 +1,14 @@
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@font-face {
+    font-family: "Myriad";
+    src: url('../fonts/Myriad-Regular.ttf') format("truetype");
 }
-body {
-    font-family: sans-serif;
-    font-size: 16px;
+@font-face {
+    font-family: "Myriad-B";
+    src: url('../fonts/Myriad-Bold.ttf') format("truetype");
+}
+
+body{
+    margin: 0px!important;
 }
 nav {
     background: WHITE;
@@ -15,6 +17,10 @@ nav {
 a {
     color: white;
     text-decoration: none;
+}
+.menu,
+.submenu {
+    list-style-type: none;
 }
 .logo {
     font-size: 20px;
@@ -41,9 +47,344 @@ a {
     display: block;
     padding: 15px 5px;
 }
+.menu li.subitem a {
+    padding: 15px;
+}
 
 .button.secondary {
     border-bottom: 1px #444 solid;
 }
 
 
+
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .button a {
+        background: #e76824;
+        border-radius: 2px;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button.secondary a {
+        color: gray;
+        background: transparent;
+
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+    }
+}
+
+@media all and (min-width: 960px) {
+    .menu {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+
+}
+
+.banner {
+    color: white;
+    background: url('../img/banner.jpg') top left/cover no-repeat;
+    height: 300px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.banner h1, .banner h3, .banner h6 {
+    margin: 0;
+}
+.banner-text{
+    max-width: 300px;
+    padding: 15px;
+    text-align: left;
+    background-color:#e76824;
+
+}
+h6 { font-size: 15px; }
+
+
+.services h1,p{
+    text-align: center;
+}
+.services h1{
+    font-family: "Myriad-B";
+    font-size: 30px;
+    justify-self: center;
+}
+.services p{
+    font-family: "Myriad";
+    font-size: 16px;
+}
+
+.services{
+    margin-top: 94px;
+    grid-area: services;
+    display: grid;
+    grid-template-areas: "services-header" "services-boxs";
+}
+
+#services-header{
+    grid-area: services-header;
+    display: grid;
+    grid-template-areas: "services-header-title" "services-header-description";
+    justify-self: center;
+}
+
+#services-boxs{
+    grid-area: services-boxs;
+    display: grid;
+     grid-template-areas: "services-box1 services-box2" "services-box3 services-box4";
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 6vw;
+    justify-content: space-around;
+}
+
+#services-box1{
+    grid-area: services-box1;
+    display: grid;
+    grid-template-areas: "services-icon1 services-title1" "services-icon1 services-description1";
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 6vw;
+    justify-content: space-around;
+}
+
+#services-icon1{
+    grid-area: services-icon1;
+    display: block;
+    background: url(../icons/rhoncus.svg);
+    height: 42px;
+    width: 41px;
+    margin-right: 20px;
+}
+
+#services-box2{
+    grid-area: services-box2;
+    display: grid;
+    grid-template-areas: "services-icon2 services-title2" "services-icon2 services-description2";
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 6vw;
+    /*justify-content: space-around;*/
+}
+
+#services-icon2{
+    grid-area: services-icon2;
+    display: block;
+    background: url(../icons/mattis.svg);
+    height: 42px;
+    width: 41px;
+    margin-right: 20px;
+}
+
+#services-box3{
+    grid-area: services-box3;
+    display: grid;
+    grid-template-areas: "services-icon3 services-title3" "services-icon3 services-description3";
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 6vw;
+    justify-content: space-around;
+}
+
+#services-icon3{
+    grid-area: services-icon3;
+    display: block;
+    background: url(../icons/elementum.svg);
+    height: 42px;
+    width: 41px;
+    margin-right: 20px;
+}
+
+#services-box4{
+    grid-area: services-box4;
+    display: grid;
+    grid-template-areas: "services-icon4 services-title4" "services-icon4 services-description4";
+    flex-wrap: wrap;
+    max-width: 1056.28px;
+    flex-direction: row;
+    margin-left: 6vw;
+    justify-content: space-around;
+}
+
+#services-icon4{
+    grid-area: services-icon4;
+    display: block;
+    background: url(../icons/mauris.svg);
+    height: 42px;
+    width: 41px;
+    margin-right: 20px;
+}
+
+#sobre-nos{
+    margin-top: 90px;
+    grid-area: sobre-nos;
+    display: grid;
+    grid-template-areas: "sobre-nos-left sobre-nos-right" ;
+}
+#sobre-nos-img{
+    max-width: 851px;
+    min-width: 200px;
+    width: inherit;
+    object-fit: cover;
+    height: max-content;
+}
+#sobre-nos-left{
+    width: 100%;
+    display: grid;
+}
+#sobre-nos-right{
+    width: 100%;
+    margin-top: 80px;
+    grid-area: sobre-nos-right;
+    display: grid;
+    grid-template-areas: "sobre-nos-title" "sobre-nos-text" "sobre-nos-img";
+}
+
+#sobre-nos-infos{
+    width: 100%;
+}
+
+#como-funciona{
+    margin-top: 90px;
+    grid-area: como-funciona;
+    display: grid;
+    grid-template-areas: "como-funciona-title""como-funciona-passo""como-funciona-btn" ;
+}
+
+#como-funciona-title h1{
+    text-align: center;
+}
+
+#como-funciona-passo{
+    margin: 0px 150px;
+    grid-area: como-funciona-passo;
+    display: grid;
+    grid-template-areas: "cfp-box-1 cfp-divide-1 cfp-box-2 cfp-divide-2 cfp-box-3 cfp-divide-3 cfp-box-4" ;
+}
+#cfp-box-1{
+    justify-items: center;
+    display:grid;
+    grid-area: cfp-box-1;
+    grid-template-areas: "cfp-img-1""cfp-title-1""cfp-desc-1";
+}
+#cfp-box-2{
+    justify-items: center;
+    display:grid;
+    grid-area: cfp-box-2;
+    grid-template-areas: "cfp-img-2""cfp-title-2""cfp-desc-2";
+}
+#cfp-box-3{
+    justify-items: center;
+    display:grid;
+    grid-area: cfp-box-3;
+    grid-template-areas: "cfp-img-3""cfp-title-3""cfp-desc-3";
+}
+#cfp-box-4{
+    justify-items: center;
+    display:grid;
+    grid-area: cfp-box-4;
+    grid-template-areas: "cfp-img-4""cfp-title-4""cfp-desc-4";
+}
+
+#como-funciona-btn{
+    margin: 60px auto;
+}
+#como-funciona-btn button{
+    background-color:yellowgreen;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+#cadastre{
+    background-color: deepskyblue;
+    padding: 50px 100px;
+    margin-top: 90px;
+    grid-area: como-funciona;
+    display: grid;
+    grid-template-areas: "cadastre-title""cadastre-desc""cadastre-form" ;
+}
+#cadastre-title, #cadastre-desc{
+    margin: 10px 0;
+    text-align: center;
+}
+
+#cadastre-form{
+    grid-area: cadastre-form;
+    display: grid;
+    grid-template-areas: "c-f-input1 c-f-input2 c-f-input3 c-f-btn" ;
+}
+
+#dados{
+    padding: 50px 100px;
+    grid-area: dados;
+    display: grid;
+    grid-template-areas: "dados-title""dados-desc""dados-info" ;
+}
+#dados-title, #dados-desc{
+    margin: 10px 0;
+    text-align: center;
+}
+
+#dados-info{
+    width: 100%;
+    margin-top: 20px;
+    grid-area: dados-info;
+    display: grid;
+    grid-template-areas: "d-i-img1 d-i-img2" ;
+}
+#footer{
+    border-top:1px solid gray;
+    padding-top: 10px;
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "footer-left footer-right" ;
+    justify-content: space-around;
+}
+
+#footer-left{
+    grid-area: footer-left;
+    display: grid;
+    grid-template-areas: "f-l-1" "f-l-2" "f-l-3"  ;
+}

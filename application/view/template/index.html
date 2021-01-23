@@ -16,14 +16,174 @@
     <nav>
         <ul class="menu">
             <li class="item logo"><img src="../static/img/logo.svg"></li>
-            <li class="item button"><a href="#">HOME</a></li>
-            <li class="item button secondary"><a href="#">MENU 1</a></li>
-            <li class="item button secondary"><a href="#">MENU 2</a></li>
-            <li class="item button secondary"><a href="#">MENU 3</a></li>
+            <li class="item button"><span href="#">HOME</span></li>
+            <li class="item button secondary"><span href="#">MENU 1</span></li>
+            <li class="item button secondary"><span href="#">MENU 2</span></li>
+            <li class="item button secondary"><span href="#">MENU 3</span></li>
         </ul>
     </nav>
 </header>
 
+<section>
+    <div class="banner">
+    </div>
+</section>
+
+<section class="services">
+
+    <div id="services-header">
+        <h1 id="services-header-title">SERVIÇOS</h1>
+        <p id="services-header-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+
+    <div id="services-boxs">
+        <div id="services-box1">
+            <div id="services-icon1"></div>
+            <div id="services-title1">RHONCUS PURUS IN</div>
+            <div id="services-description1">Donec sit amet erat ut quam dignissim bibendum porta enim, ut acor tempor felis diam non
+                massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas.</div>
+        </div>
+        <div id="services-box2">
+            <div id="services-icon2"></div>
+            <div id="services-title2">RHONCUS PURUS IN</div>
+            <div id="services-description2">Donec sit amet erat ut quam dignissim bibendum porta enim, ut acor tempor felis diam non
+                massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas.</div>
+        </div>
+        <div id="services-box3">
+            <div id="services-icon3"></div>
+            <div id="services-title3">RHONCUS PURUS IN</div>
+            <div id="services-description3">Donec sit amet erat ut quam dignissim bibendum porta enim, ut acor tempor felis diam non
+                massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas.</div>
+        </div>
+        <div id="services-box4">
+            <div id="services-icon4"></div>
+            <div id="services-title4">RHONCUS PURUS IN</div>
+            <div id="services-description4">Donec sit amet erat ut quam dignissim bibendum porta enim, ut acor tempor felis diam non
+                massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas.</div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-nos">
+    <div id="sobre-nos-left">
+        <img id="sobre-nos-img" src="{{url_for('static', filename='img/sobre.jpg')}}">
+    </div>
+    <div id="sobre-nos-right">
+        <span id="sobre-nos-title">SOBRE NÓS</span>
+        <span id="sobre-nos-text">
+            In sit amet mi sollicitudin, maximus risus sed, eleifend turpis. Ut aliquet fermentum leo eu
+                vestibulum. Aliquam vitae iaculis neque. Proin vitae quam ac lectus fermentum viverra. Vestibulum eu sem
+                lobortis, rhoncus purus in, mattis augue. Proin nec tempor ipsum. Sed eu libero at arcu dictum rhoncus.
+                Vestibulum at tempus felis. Vestibulum mattis tincidunt eleifend.In sit amet mi sollicitudin, maximus
+                risus sed, eleifend turpis. Ut aliquet fermentum leo eu vestibulum. Aliquam vitae iaculis neque. Proin
+                vitae quam ac lectus fermentum viverra. Vestibulum eu sem lobortis, rhoncus purus in, mattis augue.
+                Sed eu libero at arcu dictum rhoncus. Vestibulum at tempus felis. Vestibulum mattis tincidunt
+                eleifend.
+        </span>
+        <img id="sobre-nos-infos" src="{{url_for('static', filename='img/layout-onepage-graphs.png')}}">
+    </div>
+</section>
+
+<section id="como-funciona">
+    <div id="como-funciona-title">
+        <h1>COMO FUNCIONA?</h1>
+    </div>
+    <div id="como-funciona-passo">
+        <div id="cfp-box-1">
+            <span id="cfp-img-1"><img src="{{url_for('static', filename='icons/world.svg')}}"></span>
+            <span class="cfp-title-1" >PASSO 1</span>
+            <span class="cfp-desc-1">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                ut dignissim ligula est at erat.</span>
+        </div>
+        <div id="cfp-divide-1">
+            <img src="{{url_for('static', filename='icons/top-arrow.svg')}}">
+        </div>
+        <div id="cfp-box-2">
+            <span id="cfp-img-2">
+                <img src="{{url_for('static', filename='icons/market-car.svg')}}">
+            </span>
+            <span class="cfp-title-2">PASSO 2</span>
+            <span class="cfp-desc-2">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                ut dignissim ligula est at erat.</span>
+        </div>
+        <div id="cfp-divide-2">
+            <img style="margin-top: 50px;" src="{{url_for('static', filename='icons/bottom-arrow.svg')}}">
+        </div>
+        <div id="cfp-box-3">
+            <span id="cfp-img-3">
+                <img src="{{url_for('static', filename='icons/like.svg')}}">
+            </span>
+            <span class="cfp-title-3">PASSO 3</span>
+            <span class="cfp-desc-3">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                ut dignissim ligula est at erat.</span>
+        </div>
+        <div id="cfp-divide-3">
+            <img  src="{{url_for('static', filename='icons/top-arrow.svg')}}">
+        </div>
+        <div id="cfp-box-4">
+            <span id="cfp-img-4">
+                <img src="{{url_for('static', filename='icons/truck.svg')}}">
+            </span>
+            <span class="cfp-title-4">PASSO 4</span>
+            <span class="cfp-desc-4">Donec posuere, libero in tincidunt consectetur, velit diam lacinia magna,
+                ut dignissim ligula est at erat.</span>
+        </div>
+    </div>
+    <div id="como-funciona-btn">
+        <button><b>LEIA MAIS</b></button>
+    </div>
+</section>
+
+<section id="cadastre">
+    <div id="cadastre-title">
+        <span>CADASTRE-SE</span>
+    </div>
+    <div id="cadastre-desc">
+        <span>Lorem ipsum dolor site amet, consctetur adpscing elit.</span>
+    </div>
+    <div id="cadastre-form">
+        <div id="c-f-input1"><input placeholder="Nome"></div>
+        <div id="c-f-input2"><input placeholder="Email"></div>
+        <div id="c-f-input3"><input placeholder="Telefone"></div>
+        <div id="c-f-btn"><button >ENVIAR</button></div>
+    </div>
+</section>
+
+<section id="dados">
+    <div id="dados-title">
+        <span>DADOS</span>
+    </div>
+    <div id="dados-desc">
+        <span>Lorem ipsum dolor site amet, consctetur adpscing elit.</span>
+    </div>
+    <div id="dados-info">
+        <div id="d-i-img1">
+            <img src="{{url_for('static', filename='img/tabela.png')}}">
+        </div>
+        <div id="d-i-img2">
+            <img src="{{url_for('static', filename='img/grafico.png')}}">
+        </div>
+    </div>
+</section>
+
+<section id="footer">
+    <div id="footer-left">
+        <span id="f-l-1">Cubo</span>
+        <span id="f-l-2">Rua Casa do Ator, 919</span>
+        <span id="f-l-3">04546-003 - São Paulo - SP</span>
+    </div>
+
+    <div id="footer-right">
+        <span id="f-r-1"><img src="{{url_for('static', filename='icons/facebook.svg')}}"></span>
+        <span id="f-r-2"><img src="{{url_for('static', filename='icons/google.svg')}}"></span>
+        <span id="f-r-3"><img src="{{url_for('static', filename='icons/twitter.svg')}}"></span>
+        <span id="f-r-4"><img src="{{url_for('static', filename='icons/youtube.svg')}}"></span>
+    </div>
+</section>
 </body>
 
 </html>
